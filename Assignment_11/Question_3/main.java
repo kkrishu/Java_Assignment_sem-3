@@ -1,18 +1,20 @@
-import java.util.ArrayList;
-
 public class main {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
+        int[] arr = {5, 1, 4, 2, 8};
+        int swaps = 0;
 
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        list.add(40);
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
 
-        list.set(1, 25);
-        list.remove(3);
+                    swaps++;
+                }
+            }
+        }
 
-        System.out.println(list);
-        System.out.println("Size: " + list.size());
+        System.out.println("Swaps: " + swaps);
     }
 }

@@ -1,22 +1,19 @@
+import java.util.Arrays;
+
 public class main {
     public static void main(String[] args) {
-        int day = 3;
+        int[] arr = {5, 1, 4, 2, 8};
 
-        switch (day) {
-            case 1:
-                System.out.println("Monday");
-                break;
-
-            case 2:
-                System.out.println("Tuesday");
-                break;
-
-            case 3:
-                System.out.println("Wednesday");
-                break;
-
-            default:
-                System.out.println("Invalid day");
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
         }
+
+        System.out.println("Sorted: " + Arrays.toString(arr));
     }
 }

@@ -1,10 +1,10 @@
-# Assignment 10 – Switch and ArrayList
+# Assignment 11 – Bubble Sort and Selection Sort
 
 ## 1. Experiment Title
-Switch and ArrayList
+Bubble Sort and Selection Sort
 
 ## 2. Aim
-To choose a branch using a switch statement and store, access, update, and remove elements from an ArrayList.
+To sort integer arrays using Bubble Sort and Selection Sort algorithms and count the number of swaps performed during Bubble Sort.
 
 ## 3. Software / Tools Required
 - Java Development Kit (JDK)
@@ -14,85 +14,79 @@ To choose a branch using a switch statement and store, access, update, and remov
 - Git and GitHub
 
 ## 4. Theory
-A switch statement is a decision-making statement in Java. It executes a particular block of code based on the value of an expression.
 
-An ArrayList is a resizable collection in Java that can store elements dynamically. Unlike a normal array, its size can increase or decrease when elements are added or removed.
+Sorting is the process of arranging elements in a particular order, such as ascending or descending order.
 
-Important ArrayList methods:
+**Bubble Sort:**
+Bubble Sort repeatedly compares adjacent elements and swaps them if they are in the wrong order. After each pass, the largest unsorted element moves to its correct position.
 
-- `add()` – Adds an element to the list.
-- `get()` – Retrieves an element using its index.
-- `size()` – Returns the number of elements.
-- `set()` – Updates an element at a specified index.
-- `remove()` – Removes an element from the list.
+**Selection Sort:**
+Selection Sort repeatedly finds the smallest element from the unsorted portion of an array and places it at the beginning of that portion.
 
-ArrayList indexing starts from 0.
+**Swap:**
+A swap is the process of exchanging the positions of two elements in an array.
+
+The `Arrays.toString()` method is used to display array elements in a readable format.
 
 ## 5. Algorithm / Procedure
 
-### Question 1: Switch Statement
-1. Declare an integer variable named day and initialize it with 3.
-2. Use a switch statement to check the value of day.
-3. Print Monday for 1, Tuesday for 2, and Wednesday for 3.
-4. Use default to print Invalid day for other values.
-5. Use break statements to exit each case.
+### Question 1: Bubble Sort
+1. Declare and initialize the integer array with 5, 1, 4, 2, 8.
+2. Use an outer loop to control the number of passes.
+3. Use an inner loop to compare adjacent elements.
+4. If the current element is greater than the next element, swap them.
+5. Repeat until the array is sorted.
+6. Print the sorted array using Arrays.toString().
 
-### Question 2: Create and Access ArrayList
-1. Import the ArrayList class.
-2. Create an ArrayList of Integer named list.
-3. Add 10, 20, 30, and 40 using add().
-4. Print the complete list.
-5. Display the list size using size().
-6. Display the element at index 2 using get().
+### Question 2: Selection Sort
+1. Declare and initialize the integer array with 64, 25, 12, 22, 11.
+2. Use an outer loop to select the current position.
+3. Assume the current position contains the minimum element.
+4. Use an inner loop to find the smallest element in the remaining array.
+5. Swap the smallest element with the current position.
+6. Print the sorted array.
 
-### Question 3: Update and Remove Elements
-1. Import the ArrayList class.
-2. Create an ArrayList of Integer named list.
-3. Add 10, 20, 30, and 40.
-4. Use set() to replace the element at index 1 with 25.
-5. Use remove() to delete the element at index 3.
-6. Print the updated list and its size.
+### Question 3: Count Swaps in Bubble Sort
+1. Declare and initialize the integer array with 5, 1, 4, 2, 8.
+2. Initialize a counter variable named swaps to 0.
+3. Apply Bubble Sort using nested loops.
+4. Compare adjacent elements.
+5. Whenever two elements are swapped, increment the swaps counter.
+6. Print the total number of swaps.
 
 ## 6. Input
 
 ### Question 1
-Predefined integer value:
 ```text
-day = 3
+5, 1, 4, 2, 8
 ```
 
 ### Question 2
-Predefined ArrayList values:
 ```text
-10, 20, 30, 40
+64, 25, 12, 22, 11
 ```
 
 ### Question 3
-Predefined ArrayList values:
 ```text
-10, 20, 30, 40
+5, 1, 4, 2, 8
 ```
-Update index 1 to 25 and remove index 3.
 
 ## 7. Output
 
 ### Question 1
 ```text
-Wednesday
+Sorted: [1, 2, 4, 5, 8]
 ```
 
 ### Question 2
 ```text
-[10, 20, 30, 40]
-Size: 4
-Item at index 2: 30
+Sorted: [11, 12, 22, 25, 64]
 ```
 
 ### Question 3
 ```text
-[10, 25, 30]
-Size: 3
+Swaps: 4
 ```
 
 ## 8. Result
-Successfully implemented Java programs using switch statements and ArrayList methods to perform decision-making, add elements, access elements, update values, and remove elements.
+Successfully implemented Bubble Sort and Selection Sort algorithms in Java to arrange array elements in ascending order and count the swaps performed during Bubble Sort.

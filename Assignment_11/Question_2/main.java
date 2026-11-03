@@ -1,16 +1,23 @@
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class main {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
+        int[] arr = {64, 25, 12, 22, 11};
 
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        list.add(40);
+        for (int i = 0; i < arr.length - 1; i++) {
+            int minIndex = i;
 
-        System.out.println(list);
-        System.out.println("Size: " + list.size());
-        System.out.println("Item at index 2: " + list.get(2));
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        }
+
+        System.out.println("Sorted: " + Arrays.toString(arr));
     }
 }
